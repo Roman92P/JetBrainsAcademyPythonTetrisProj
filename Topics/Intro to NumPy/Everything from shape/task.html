@@ -1,0 +1,21 @@
+<h2>Everything from shape?</h2>
+<p></p>
+<p>The only thing you know about a NumPy array <code class="language-python">a</code> is its <u><strong>shape</strong></u>:</p>
+<pre><code class="language-python">print(a.shape)  # (3, 2, 6, 1)</code></pre>
+<p>What else can you infer from this knowledge?</p>
+<p>Do you know:</p>
+<ul>
+<li>its <u>number of dimensions</u>?</li>
+<li>its <u>size</u>?</li>
+<li>the <u>number of elements</u> in the first dimension?</li>
+</ul>
+<p>Sum the numerical values of the features that can be inferred from <code class="language-python">a.shape</code> . If the feature can't be inferred, do not add anything to the score. The answer is the sum described above.</p>
+<p>For example, let's say we can get the number of dimensions from <code class="language-python">a.shape</code>, and it's 3; we can't infer the size from a.shape; and the number of elements in the first dimension is 5. Then, the answer would be <span class="math-tex">\(3+5 = 8\)</span>.</p>
+<p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-944').style.display='inline'">
+        Hint
+      </button>
+</p><div id="hint-944" style="display:none;">If you are not sure about the answer, revise the information from the "Learning sizes" part in the theory. You can also consider the following snippet to obtain the answer:
+
+<pre><code class="language-python">import numpy as np
+n = np.zeros((3, 2, 6, 1))</code></pre>
+<p></p></div>
