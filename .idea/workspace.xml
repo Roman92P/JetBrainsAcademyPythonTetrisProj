@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="" />
+    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/Topics/Slicing/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/I Disappear/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/I Disappear/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/I Like to Move It/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/I Like to Move It/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/Let the Pieces Hit the Floor/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/Let the Pieces Hit the Floor/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/task/tetris/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/task/tetris/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topics/section-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Topics/section-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +48,39 @@
       <option name="presentableId" value="Default" />
       <updated>1676323727138</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1678618093209</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678618093209</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1678629081695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678629081695</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit">
+      <created>1679864650264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679864650264</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <created>1679868367806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679868367806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
