@@ -19,23 +19,27 @@ input_symbol = str(input())
 print('')
 
 
-def printGrid(arr):
-    for row in arr:
-        print(''.join(row))
+def print_grid(arr):
+    for r in arr:
+        print(''.join(r))
     print('')
 
-printGrid(grid)
+
+print_grid(grid)
 
 if symbol_arr.__contains__(input_symbol):
     symbol_all_coordinates = globals()[input_symbol]
 
     counter = 0
-    while counter < len(symbol_all_coordinates) + 1:
-        shape_cords_to_be_printed = ''
-        if counter == len(symbol_all_coordinates):
-            shape_cords_to_be_printed = symbol_all_coordinates[0]
+    index = 0
+    while counter < 5:
+        shape_cords_to_be_printed = symbol_all_coordinates[index]
+
+        if index + 1 < len(symbol_all_coordinates):
+            index += 1
         else:
-            shape_cords_to_be_printed = symbol_all_coordinates[counter]
+            index = 0
+
         row_count = 0
         count = 0
         for row in grid:
@@ -48,5 +52,5 @@ if symbol_arr.__contains__(input_symbol):
                 col_count += 1
                 count += 1
             row_count += 1
-        printGrid(grid)
+        print_grid(grid)
         counter += 1

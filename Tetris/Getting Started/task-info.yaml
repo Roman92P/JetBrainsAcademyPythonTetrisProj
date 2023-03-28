@@ -105,12 +105,8 @@ files:
         Tetris('tetris.game').run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/11891#comment
-status: Failed
+status: Solved
 feedback:
-  message: "Wrong answer in test #3\n\nA field with 6 grids is expected to be printed.\
-    \ Found 3 grids\n\nPlease find below the output of your program during this failed\
-    \ test.\nNote that the '>' character indicates the beginning of the input line.\n\
-    \n---\n\n> O\n\n- - - - \n- - - - \n- - - - \n- - - - \n\n- - - - \n- 0 0 - \n\
-    - 0 0 - \n- - - - \n\n- - - - \n- 0 0 - \n- 0 0 - \n- - - -"
-  time: "Tue, 28 Mar 2023 14:35:33 UTC"
+  message: Congratulations!
+  time: "Tue, 28 Mar 2023 21:16:21 UTC"
 record: -1

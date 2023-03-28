@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="commit">
+    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="during first tetris task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris/task/tetris/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/task/tetris/game.py" afterDir="false" />
@@ -77,11 +77,19 @@
       <option name="project" value="LOCAL" />
       <updated>1679953084351</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="during first tetris task">
+      <created>1680014190244</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680014190244</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="during first tetris task" />
+    <option name="LAST_COMMIT_MESSAGE" value="during first tetris task" />
   </component>
 </project>
