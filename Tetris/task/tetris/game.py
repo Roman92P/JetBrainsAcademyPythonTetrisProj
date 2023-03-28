@@ -16,13 +16,13 @@ for x in range(0, 4):
     grid.append(['- ', '- ', '- ', '- '])
 
 input_symbol = str(input())
+print('')
 
 
 def printGrid(arr):
     for row in arr:
         print(''.join(row))
-    # print('\n')
-
+    print('')
 
 printGrid(grid)
 
@@ -34,7 +34,8 @@ if symbol_arr.__contains__(input_symbol):
         shape_cords_to_be_printed = ''
         if counter == len(symbol_all_coordinates):
             shape_cords_to_be_printed = symbol_all_coordinates[0]
-        else: shape_cords_to_be_printed = symbol_all_coordinates[counter]
+        else:
+            shape_cords_to_be_printed = symbol_all_coordinates[counter]
         row_count = 0
         count = 0
         for row in grid:
