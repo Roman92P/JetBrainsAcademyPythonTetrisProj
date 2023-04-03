@@ -193,6 +193,9 @@ files:
     if __name__ == '__main__':
         Tetris('tetris.game').run_tests()
   learner_created: false
+- name: tetris/game_ver_1.0.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11892#comment
 status: Unchecked
 record: -1
