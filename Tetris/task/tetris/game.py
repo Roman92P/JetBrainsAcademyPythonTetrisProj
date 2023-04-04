@@ -9,7 +9,38 @@ T = [[4, 14, 24, 15], [4, 13, 14, 15], [5, 15, 25, 14], [4, 5, 6, 15]]
 symbol_arr = ['O', 'I', 'S', 'Z', 'L', 'J', 'T']
 
 
+def find_pos_in_one_lane(update_shape_cords, grid_width):
+    one = []
+    for i in update_shape_cords:
+        if update_shape_cords.__contains__(i + grid_width):
+            one.append(i)
+            one.append(i + 10)
+    one_filtered = list(set(one))
+    two = []
+    for k in update_shape_cords:
+        if update_shape_cords.__contains__(k + 1):
+            two.append(k)
+            two.append(k + 1)
+    two_filtered = list(set(two))
+    return one_filtered if len(one_filtered) == 3 else two_filtered
+
+
+def find_alone_position(lane_positions, update_shape_cords):
+    for x in update_shape_cords:
+        if not lane_positions.__contains__(x):
+            return x
+
+
+def all_lane_poss_more_then_alone(lane_positions, alone_position):
+    result = 0
+    for x in lane_positions:
+        if x > alone_position:
+            result += 1
+    return result
+
+
 def rotate(current_grid_state):
+    grid_width = len(current_grid_state[0])
     update_shape_cords = []
     count = 0
     row_count = 0
@@ -24,13 +55,12 @@ def rotate(current_grid_state):
         row_count += 1
 
     result = []
-    print(update_shape_cords)
     if input_symbol == 'I':
         if update_shape_cords[0] + 3 == update_shape_cords[3]:
             result.append(update_shape_cords[1])
-            result.append(update_shape_cords[1] + 10)
-            result.append(update_shape_cords[1] + 20)
-            result.append(update_shape_cords[1] + 30)
+            result.append(update_shape_cords[1] + grid_width)
+            result.append(update_shape_cords[1] + (grid_width * 2))
+            result.append(update_shape_cords[1] + (grid_width * 3))
         else:
             result.append(update_shape_cords[0])
             result.append(update_shape_cords[0] - 1)
@@ -39,9 +69,9 @@ def rotate(current_grid_state):
     elif input_symbol == 'S':
         if update_shape_cords[1] - update_shape_cords[0] == 1 and update_shape_cords[3] - update_shape_cords[2] == 1:
             result.append(update_shape_cords[0])
-            result.append(update_shape_cords[0] + 10)
-            result.append(update_shape_cords[0] + 10 + 1)
-            result.append(update_shape_cords[0] + 10 + 1 + 10)
+            result.append(update_shape_cords[0] + grid_width)
+            result.append(update_shape_cords[0] + grid_width + 1)
+            result.append(update_shape_cords[0] + grid_width + 1 + grid_width)
         else:
             result.append(update_shape_cords[0])
             result.append(update_shape_cords[0] + 1)
@@ -50,9 +80,9 @@ def rotate(current_grid_state):
     elif input_symbol == 'Z':
         if update_shape_cords[1] - update_shape_cords[0] == 1 and update_shape_cords[3] - update_shape_cords[2] == 1:
             result.append(update_shape_cords[1])
-            result.append(update_shape_cords[1] + 10)
-            result.append(update_shape_cords[1] + 10 - 1)
-            result.append(update_shape_cords[1] + 10 - 1 + 10)
+            result.append(update_shape_cords[1] + grid_width)
+            result.append(update_shape_cords[1] + grid_width - 1)
+            result.append(update_shape_cords[1] + grid_width - 1 + grid_width)
         else:
             result.append(update_shape_cords[0])
             result.append(update_shape_cords[0] - 1)
@@ -61,49 +91,71 @@ def rotate(current_grid_state):
     elif input_symbol == 'L':
         if update_shape_cords[1] - update_shape_cords[0] == 10 and update_shape_cords[2] - update_shape_cords[1] == 10:
             result.append(update_shape_cords[0] + 1)
-            result.append(update_shape_cords[0] + 1 + 10)
-            result.append(update_shape_cords[0] + 1 + 10 - 1)
-            result.append(update_shape_cords[0] + 1 + 10 - 2)
+            result.append(update_shape_cords[0] + 1 + grid_width)
+            result.append(update_shape_cords[0] + 1 + grid_width - 1)
+            result.append(update_shape_cords[0] + 1 + grid_width - 2)
         elif update_shape_cords[2] - update_shape_cords[1] == 1 and update_shape_cords[3] - update_shape_cords[2] == 1:
             result.append(update_shape_cords[0])
-            result.append(update_shape_cords[0] + 10)
-            result.append(update_shape_cords[0] + 20)
+            result.append(update_shape_cords[0] + grid_width)
+            result.append(update_shape_cords[0] + (grid_width * 2))
             result.append(update_shape_cords[0] - 1)
         elif update_shape_cords[2] - update_shape_cords[1] == 10 and update_shape_cords[3] - update_shape_cords[
             2] == 10:
             result.append(update_shape_cords[1] + 1)
             result.append(update_shape_cords[1])
             result.append(update_shape_cords[1] - 1)
-            result.append(update_shape_cords[1] - 1 + 10)
+            result.append(update_shape_cords[1] - 1 + grid_width)
         elif update_shape_cords[1] - update_shape_cords[0] == 1 and update_shape_cords[2] - update_shape_cords[1] == 1:
             result.append(update_shape_cords[0])
-            result.append(update_shape_cords[0] + 10)
-            result.append(update_shape_cords[0] + 20)
-            result.append(update_shape_cords[0] + 20 + 1)
+            result.append(update_shape_cords[0] + grid_width)
+            result.append(update_shape_cords[0] + (grid_width * 2))
+            result.append(update_shape_cords[0] + (grid_width * 2) + 1)
     if input_symbol == 'J':
         if update_shape_cords[1] - update_shape_cords[0] == 10 and update_shape_cords[3] - update_shape_cords[1] == 10:
             result.append(update_shape_cords[1])
-            result.append(update_shape_cords[1] - 10)
-            result.append(update_shape_cords[1] - 10 - 1)
-            result.append(update_shape_cords[1] - 10 - 2)
+            result.append(update_shape_cords[1] - grid_width)
+            result.append(update_shape_cords[1] - grid_width - 1)
+            result.append(update_shape_cords[1] - grid_width - 2)
         elif update_shape_cords[1] - update_shape_cords[0] == 1 and update_shape_cords[2] - update_shape_cords[1] == 1:
             result.append(update_shape_cords[2])
             result.append(update_shape_cords[2] - 1)
-            result.append(update_shape_cords[2] - 1 + 10)
-            result.append(update_shape_cords[2] - 1 + 20)
-        elif update_shape_cords[2] - update_shape_cords[0] == 10 and update_shape_cords[3] - update_shape_cords[2] == 10:
+            result.append(update_shape_cords[2] - 1 + grid_width)
+            result.append(update_shape_cords[2] - 1 + (grid_width * 2))
+        elif update_shape_cords[2] - update_shape_cords[0] == 10 and update_shape_cords[3] - update_shape_cords[
+            2] == 10:
             result.append(update_shape_cords[0])
-            result.append(update_shape_cords[0] + 10)
-            result.append(update_shape_cords[0] + 10 + 1)
-            result.append(update_shape_cords[0] + 10 + 2)
+            result.append(update_shape_cords[0] + grid_width)
+            result.append(update_shape_cords[0] + grid_width + 1)
+            result.append(update_shape_cords[0] + grid_width + 2)
         elif update_shape_cords[2] - update_shape_cords[1] == 1 and update_shape_cords[3] - update_shape_cords[2] == 1:
             result.append(update_shape_cords[0] + 1)
-            result.append(update_shape_cords[0] + 1 + 10)
-            result.append(update_shape_cords[0] + 1 + 20)
-            result.append(update_shape_cords[0] + 20)
-    if input_symbol != 'T':
+            result.append(update_shape_cords[0] + 1 + grid_width)
+            result.append(update_shape_cords[0] + 1 + (grid_width * 2))
+            result.append(update_shape_cords[0] + (grid_width * 2))
+    if input_symbol == 'T':
+        lane_positions = find_pos_in_one_lane(update_shape_cords, grid_width)
+        alone_position = find_alone_position(lane_positions, update_shape_cords)
+        if all_lane_poss_more_then_alone(lane_positions, alone_position) == 0:
+            result.append(alone_position + 1)
+            result.append(alone_position - grid_width)
+            result.append(alone_position + grid_width)
+            result.append(alone_position)
 
-    print(result)
+        elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 1:
+            result.append(alone_position - grid_width - 1)
+            result.append(alone_position)
+            result.append(alone_position - 2)
+            result.append(alone_position - 1)
+        elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 3:
+            result.append(alone_position + grid_width)
+            result.append(alone_position + grid_width + 1)
+            result.append(alone_position + (2 * grid_width) + 1)
+            result.append(alone_position + 1)
+        elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 2:
+            result.append(alone_position)
+            result.append(alone_position - grid_width + 1)
+            result.append(alone_position - grid_width - 1)
+            result.append(alone_position - grid_width)
     temp_count = 0
     row_count = 0
     for k in current_grid_state:
@@ -221,7 +273,7 @@ def move_left(current_grid_state):
 
 
 def move_shape(user_command, current_grid_state):
-    # move_down(current_grid_state)
+    move_down(current_grid_state)
     if user_command == 'down':
         move_down(current_grid_state)
     elif user_command == 'right':
