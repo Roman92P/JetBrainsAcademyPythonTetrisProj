@@ -66,6 +66,11 @@ def rotate(current_grid_state):
             result.append(update_shape_cords[0] - 1)
             result.append(update_shape_cords[0] + 1)
             result.append(update_shape_cords[0] + 2)
+    elif input_symbol == 'O':
+        result.append(update_shape_cords[0])
+        result.append(update_shape_cords[1])
+        result.append(update_shape_cords[2])
+        result.append(update_shape_cords[3])
     elif input_symbol == 'S':
         if update_shape_cords[1] - update_shape_cords[0] == 1 and update_shape_cords[3] - update_shape_cords[2] == 1:
             result.append(update_shape_cords[0])
@@ -135,11 +140,13 @@ def rotate(current_grid_state):
     if input_symbol == 'T':
         lane_positions = find_pos_in_one_lane(update_shape_cords, grid_width)
         alone_position = find_alone_position(lane_positions, update_shape_cords)
+        # print('lane: ', lane_positions)
+        # print('alone: ', alone_position)
         if all_lane_poss_more_then_alone(lane_positions, alone_position) == 0:
-            result.append(alone_position + 1)
-            result.append(alone_position - grid_width)
-            result.append(alone_position + grid_width)
             result.append(alone_position)
+            result.append(alone_position - 1)
+            result.append(alone_position - 1 - grid_width)
+            result.append(alone_position - 1 + grid_width)
 
         elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 1:
             result.append(alone_position - grid_width - 1)
@@ -152,10 +159,10 @@ def rotate(current_grid_state):
             result.append(alone_position + (2 * grid_width) + 1)
             result.append(alone_position + 1)
         elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 2:
-            result.append(alone_position)
-            result.append(alone_position - grid_width + 1)
-            result.append(alone_position - grid_width - 1)
+            result.append(alone_position + 1)
             result.append(alone_position - grid_width)
+            result.append(alone_position - grid_width + 1)
+            result.append(alone_position - grid_width + 2)
     temp_count = 0
     row_count = 0
     for k in current_grid_state:
@@ -274,9 +281,9 @@ def move_left(current_grid_state):
 
 def move_shape(user_command, current_grid_state):
     move_down(current_grid_state)
-    if user_command == 'down':
-        move_down(current_grid_state)
-    elif user_command == 'right':
+    # if user_command == 'down':
+    #     move_down(current_grid_state)
+    if user_command == 'right':
         move_right(current_grid_state)
     elif user_command == 'left':
         move_left(current_grid_state)
