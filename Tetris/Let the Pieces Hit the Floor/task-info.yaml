@@ -177,6 +177,111 @@ files:
     if __name__ == '__main__':
         Tetris('tetris.game').run_tests()
   learner_created: false
+- name: tetris/old/game_ver_1.0.py
+  visible: true
+  text: |
+    # Write your code here
+
+    O = [[5, 6, 9, 10]]
+    I = [[1, 5, 9, 13], [4, 5, 6, 7]]
+    S = [[6, 5, 9, 8], [5, 9, 10, 14]]
+    Z = [[4, 5, 9, 10], [2, 5, 6, 9]]
+    L = [[1, 5, 9, 10], [2, 4, 5, 6], [1, 2, 6, 10], [4, 5, 6, 8]]
+    J = [[2, 6, 9, 10], [4, 5, 6, 10], [1, 2, 5, 9], [0, 4, 5, 6]]
+    T = [[1, 4, 5, 6], [1, 4, 5, 9], [4, 5, 6, 9], [1, 5, 6, 9]]
+
+    symbol_arr = ['O', 'I', 'S', 'Z', 'L', 'J', 'T']
+
+    grid = []
+
+    for x in range(0, 4):
+        grid.append(['- ', '- ', '- ', '- '])
+
+    input_symbol = str(input())
+    print('')
+
+
+    def print_grid(arr):
+        for r in arr:
+            print(''.join(r))
+        print('')
+
+
+    print_grid(grid)
+
+    if symbol_arr.__contains__(input_symbol):
+        symbol_all_coordinates = globals()[input_symbol]
+
+        counter = 0
+        index = 0
+        while counter < 5:
+            shape_cords_to_be_printed = symbol_all_coordinates[index]
+
+            if index + 1 < len(symbol_all_coordinates):
+                index += 1
+            else:
+                index = 0
+
+            row_count = 0
+            count = 0
+            for row in grid:
+                col_count = 0
+                for col in row:
+                    if count in shape_cords_to_be_printed:
+                        grid[row_count][col_count] = '0 '
+                    else:
+                        grid[row_count][col_count] = '- '
+                    col_count += 1
+                    count += 1
+                row_count += 1
+            print_grid(grid)
+            counter += 1
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/11893#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Wrong answer in test #1\n\nWrong line 1 in grid 2: Should be - - - - 0\
+    \ 0 - - - - instead of - - - - 0 0 - - - -\n\nPlease find below the output of\
+    \ your program during this failed test.\nNote that the '>' character indicates\
+    \ the beginning of the input line.\n\n---\n\n> O\n> 10 10\n- - - - - - - - - -\n\
+    - - - - - - - - - -\n- - - - - - - - - -\n- - - - - - - - - -\n- - - - - - - -\
+    \ - -\n- - - - - - - - - -\n- - - - - - - - - -\n- - - - - - - - - -\n- - - -\
+    \ - - - - - -\n- - - - - - - - - -\n\n- - - - 0 0 - - - - \n- - - - 0 0 - - -\
+    \ - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - -\
+    \ - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - -\
+    \ - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - 0 0 - - -\
+    \ - - \n- - - 0 0 - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- -\
+    \ - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - -\
+    \ - - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - - -\
+    \ - - - \n- - 0 0 - - - - - - \n- - 0 0 - - - - - - \n- - - - - - - - - - \n-\
+    \ - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- 0 0 - - - - - - - \n- 0 0 - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n0 0 - - - - - - - - \n\
+    0 0 - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    0 0 - - - - - - - - \n0 0 - - - - - - - - \n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n0 0 - - - - - - - - \n0 0 - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> right\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- 0 0 - - - - - - - \n- 0 0 - - -\
+    \ - - - - \n- - - - - - - - - - \n\n> right\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - 0 0 - -\
+    \ - - - - \n- - 0 0 - - - - - - \n\n> down\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - 0 0 - -\
+    \ - - - - \n- - 0 0 - - - - - - \n\n> right\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - 0 0 -\
+    \ - - - - \n- - - 0 0 - - - - - \n\n> left\n- - - - - - - - - - \n- - - - - -\
+    \ - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n\
+    - - - - - - - - - - \n- - - - - - - - - - \n- - - - - - - - - - \n- - 0 0 - -\
+    \ - - - - \n- - 0 0 - - - - - - \n\n> exit"
+  time: "Thu, 06 Apr 2023 21:59:26 UTC"
 record: -1

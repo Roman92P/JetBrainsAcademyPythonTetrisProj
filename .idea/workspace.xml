@@ -4,16 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="during first tetris task">
+    <list default="true" id="52ec9982-5efe-4405-bf0b-12d83eac3a73" name="Changes" comment="done task 2">
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Empty lists/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Empty lists/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Heads or Tails/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Heads or Tails/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Helping grandma/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Helping grandma/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Lottery/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Lottery/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Objects/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Objects/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Return value/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Return value/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Any and all/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Built-in mathematical functions/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Built-in mathematical functions/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Existing functions/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Existing functions/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Integer results/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Integer results/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Logistic function/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Logistic function/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/The area of a circle/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/The area of a circle/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Theory/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topics/Math functions/Theory/task.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/Getting Started/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/I Like to Move It/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/I Like to Move It/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/Let the Pieces Hit the Floor/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/Let the Pieces Hit the Floor/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tetris/task/test/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/task/test/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tetris/task/tetris/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tetris/task/tetris/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topics/section-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Topics/section-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +70,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\roman\PycharmProjects\Tetris\Tetris\task\tetris\old" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,12 +126,93 @@
       <option name="project" value="LOCAL" />
       <updated>1680014190244</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="python tetris first stage complete">
+      <created>1680038226678</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680038226678</updated>
+    </task>
+    <task id="LOCAL-00008" summary="tasks commit">
+      <created>1680124091193</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680124091193</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tasks commit">
+      <created>1680126734849</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680126734849</updated>
+    </task>
+    <task id="LOCAL-00010" summary="tasks commit">
+      <created>1680381743697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680381743697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="tasks commit">
+      <created>1680386802502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680386802502</updated>
+    </task>
+    <task id="LOCAL-00012" summary="tasks commit">
+      <created>1680465774440</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680465774440</updated>
+    </task>
+    <task id="LOCAL-00013" summary="tasks commit">
+      <created>1680550162279</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680550162279</updated>
+    </task>
+    <task id="LOCAL-00014" summary="tasks commit">
+      <created>1680557145021</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680557145022</updated>
+    </task>
+    <task id="LOCAL-00015" summary="tasks commit during task 2 tetris python">
+      <created>1680564681425</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680564681425</updated>
+    </task>
+    <task id="LOCAL-00016" summary="tasks commit during task 2 tetris python">
+      <created>1680649102623</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680649102623</updated>
+    </task>
+    <task id="LOCAL-00017" summary="done task 2">
+      <created>1680801863076</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680801863076</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="during first tetris task" />
-    <option name="LAST_COMMIT_MESSAGE" value="during first tetris task" />
+    <MESSAGE value="python tetris first stage complete" />
+    <MESSAGE value="tasks commit" />
+    <MESSAGE value="tasks commit during task 2 tetris python" />
+    <MESSAGE value="done task 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="done task 2" />
   </component>
 </project>

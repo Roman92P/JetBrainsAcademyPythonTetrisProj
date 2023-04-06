@@ -104,8 +104,7 @@ def rotate(current_grid_state):
             result.append(update_shape_cords[0] + grid_width)
             result.append(update_shape_cords[0] + (grid_width * 2))
             result.append(update_shape_cords[0] - 1)
-        elif update_shape_cords[2] - update_shape_cords[1] == 10 and update_shape_cords[3] - update_shape_cords[
-            2] == 10:
+        elif update_shape_cords[2] - update_shape_cords[1] == 10 and update_shape_cords[3] - update_shape_cords[2] == 10:
             result.append(update_shape_cords[1] + 1)
             result.append(update_shape_cords[1])
             result.append(update_shape_cords[1] - 1)
@@ -140,14 +139,11 @@ def rotate(current_grid_state):
     if input_symbol == 'T':
         lane_positions = find_pos_in_one_lane(update_shape_cords, grid_width)
         alone_position = find_alone_position(lane_positions, update_shape_cords)
-        # print('lane: ', lane_positions)
-        # print('alone: ', alone_position)
         if all_lane_poss_more_then_alone(lane_positions, alone_position) == 0:
             result.append(alone_position)
             result.append(alone_position - 1)
             result.append(alone_position - 1 - grid_width)
             result.append(alone_position - 1 + grid_width)
-
         elif all_lane_poss_more_then_alone(lane_positions, alone_position) == 1:
             result.append(alone_position - grid_width - 1)
             result.append(alone_position)
@@ -183,6 +179,7 @@ def create_grid(grid_wh):
     grid_high = temp_wh_arr[1]
     for x in range(0, int(grid_high)):
         grid_row = ["- " for k in range(int(grid_width))]
+        grid_row[len(grid_row) - 1] = "-"
         grid.append(grid_row)
     return grid
 
@@ -223,6 +220,7 @@ def fill_the_grid_with_starting_pos(two_dm_arr, input_shape):
 
 
 def move_down(current_grid_state):
+    number_of_rows = len(current_grid_state)
     update_shape_cords = []
     count = 0
     row_count = 0
@@ -230,8 +228,9 @@ def move_down(current_grid_state):
         col_count = 0
         for j in i:
             if j == "0 ":
-                current_grid_state[row_count][col_count] = "- "
-                update_shape_cords.append(str(int(row_count + 1)) + " " + str(col_count))
+                if row_count + 1 < number_of_rows - 1:
+                    current_grid_state[row_count][col_count] = "- "
+                update_shape_cords.append(str(min(int(row_count + 1), number_of_rows - 1)) + " " + str(col_count))
             count += 1
             col_count += 1
         row_count += 1
@@ -242,6 +241,7 @@ def move_down(current_grid_state):
 
 
 def move_right(current_grid_state):
+    number_of_cols = len(current_grid_state[0])
     update_shape_cords = []
     count = 0
     row_count = 0
@@ -249,8 +249,9 @@ def move_right(current_grid_state):
         col_count = 0
         for j in i:
             if j == "0 ":
-                current_grid_state[row_count][col_count] = "- "
-                update_shape_cords.append(str(row_count) + " " + str(int(col_count + 1)))
+                if col_count + 1 < number_of_cols - 1:
+                    current_grid_state[row_count][col_count] = "- "
+                update_shape_cords.append(str(row_count) + " " + str(min(int(col_count + 1), number_of_cols - 1)))
             count += 1
             col_count += 1
         row_count += 1
@@ -268,8 +269,9 @@ def move_left(current_grid_state):
         col_count = 0
         for j in i:
             if j == "0 ":
-                current_grid_state[row_count][col_count] = "- "
-                update_shape_cords.append(str(row_count) + " " + str(int(col_count - 1)))
+                if col_count - 1 > 0:
+                    current_grid_state[row_count][col_count] = "- "
+                update_shape_cords.append(str(row_count) + " " + str(max(int(col_count - 1), 0)))
             count += 1
             col_count += 1
         row_count += 1
